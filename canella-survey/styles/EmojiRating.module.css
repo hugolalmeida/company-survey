@@ -1,0 +1,156 @@
+.container {
+    margin: 15px auto;
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  @media (max-width: 425px) {
+    .container {
+      margin: 12px auto;
+      padding: 0 5px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .container {
+      margin: 10px auto;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .container {
+      margin: 8px auto;
+    }
+  }
+  
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: normal;
+    padding: 0 5px;
+  }
+  
+  @media (max-width: 425px) {
+    .title {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .title {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .title {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+  }
+  
+  .emojiGrid {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  @media (max-width: 425px) {
+    .emojiGrid {
+      gap: 6px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .emojiGrid {
+      gap: 4px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .emojiGrid {
+      gap: 3px;
+    }
+  }
+  
+  .emojiButton {
+    font-size: 1.8rem;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .emojiButton:hover {
+    transform: scale(1.1);
+  }
+  
+  .emojiButton:active {
+    transform: scale(0.95);
+  }
+  
+  .selected {
+    background-color: #4caf50;
+  }
+  
+  @media (max-width: 425px) {
+    .emojiButton {
+      width: 45px;
+      height: 45px;
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .emojiButton {
+      width: 40px;
+      height: 40px;
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .emojiButton {
+      width: 35px;
+      height: 35px;
+      font-size: 1.2rem;
+    }
+  }
+  
+  .feedback {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  @media (max-width: 425px) {
+    .feedback {
+      font-size: 0.85rem;
+      margin-top: 6px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .feedback {
+      font-size: 0.8rem;
+      margin-top: 5px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .feedback {
+      font-size: 0.75rem;
+      margin-top: 4px;
+    }
+  }
+  

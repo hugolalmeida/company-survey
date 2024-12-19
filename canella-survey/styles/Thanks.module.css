@@ -1,0 +1,129 @@
+/* styles/Thanks.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    width: 100%;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 425px) {
+    .container {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  
+  .content {
+    background-color: #F7E9EC;
+    max-width: 800px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  @media (max-width: 425px) {
+    .content {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .content {
+      padding: 10px;
+    }
+  }
+  
+  .header {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #4caf50;
+    line-height: 1.2;
+  }
+  
+  @media (max-width: 425px) {
+    .header {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .header {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .header {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  }
+  
+  .text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  
+  @media (max-width: 425px) {
+    .text {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      padding: 0 5px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .text {
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .text {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+  }
+  
+  .strongText {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #4caf50;
+  }
+  
+  @media (max-width: 425px) {
+    .strongText {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .strongText {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .strongText {
+      font-size: 0.9rem;
+    }
+  }
+  
