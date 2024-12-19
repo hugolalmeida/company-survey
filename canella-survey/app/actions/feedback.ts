@@ -3,12 +3,12 @@
 import { sql } from '@/lib/db';
 
 interface FeedbackData {
-    tempo_de_entrega: number;
-    qualidade_da_entrega: number;
-    tempo_de_resposta: number;
-    qualidade_do_atendimento: number;
-    nosso_relacionamento: number;
-    agregar_valor: number;
+    tempo_de_entrega: number | null;
+    qualidade_da_entrega: number | null;
+    tempo_de_resposta: number | null;
+    qualidade_do_atendimento: number | null;
+    nosso_relacionamento: number | null;
+    agregar_valor: number | null;
     palavra: string;
     observacoes: string;
 }

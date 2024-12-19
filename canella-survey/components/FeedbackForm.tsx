@@ -10,6 +10,8 @@ const FeedbackForm: React.FC = () => {
     const [feedback1, setFeedback1] = useState("");
     const [feedback2, setFeedback2] = useState("");
     const [ratings, setRatings] = useState<Record<string, number>>({});
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
     const router = useRouter();
 
     useEffect(() => {
@@ -25,14 +27,16 @@ const FeedbackForm: React.FC = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsLoading(true);
+        setError(null);
 
         const dbData = {
-            tempo_de_entrega: ratings["Tempo de Entrega dos Serviços"] || 0,
-            qualidade_da_entrega: ratings["Qualidade das Entregas"] || 0,
-            tempo_de_resposta: ratings["Tempo de Resposta"] || 0,
-            qualidade_do_atendimento: ratings["Qualidade do Atendimento"] || 0,
-            nosso_relacionamento: ratings["Como Avalia Nosso Relacionamento"] || 0,
-            agregar_valor: ratings["Nossos Serviços Agregam Valor ao Seu Negócio"] || 0,
+            tempo_de_entrega: ratings["Tempo de Entrega dos Serviços"] || null,
+            qualidade_da_entrega: ratings["Qualidade das Entregas"] || null,
+            tempo_de_resposta: ratings["Tempo de Resposta"] || null,
+            qualidade_do_atendimento: ratings["Qualidade do Atendimento"] || null,
+            nosso_relacionamento: ratings["Como Avalia Nosso Relacionamento"] || null,
+            agregar_valor: ratings["Nossos Serviços Agregam Valor ao Seu Negócio"] || null,
             palavra: feedback1.trim(),
             observacoes: feedback2.trim(),
         };
@@ -52,7 +56,7 @@ const FeedbackForm: React.FC = () => {
                 ...dbData,
             };
             console.log(emailContent);
-            
+
             await emailjs.send(
                 "service_mp1or57",
                 "template_2mhlnrm",
@@ -63,6 +67,9 @@ const FeedbackForm: React.FC = () => {
             router.push("/thanks");
         } catch (error) {
             console.error("Erro ao enviar feedback:", error);
+            setError("Ocorreu um erro ao enviar seu feedback. Por favor, tente novamente.");
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -94,7 +101,18 @@ const FeedbackForm: React.FC = () => {
             </div>
 
             <div style={{ textAlign: "center", marginTop: "20px" }}>
-                <button onClick={handleSubmit} className="submit-button">Enviar Feedback</button>
+            <button 
+                    onClick={handleSubmit} 
+                    className={`submit-button ${isLoading ? 'loading' : ''}`}
+                    disabled={isLoading}
+                >
+                    {isLoading ? 'Enviando...' : 'Enviar Feedback'}
+                </button>
+                {error && (
+                    <div className="error-message">
+                        {error}
+                    </div>
+                )}
             </div>
         </div>
     );
