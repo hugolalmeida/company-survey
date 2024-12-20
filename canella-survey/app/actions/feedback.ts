@@ -9,8 +9,8 @@ interface FeedbackData {
     qualidade_do_atendimento: number | null;
     nosso_relacionamento: number | null;
     agregar_valor: number | null;
-    palavra: string;
-    observacoes: string;
+    palavra: string | null;
+    observacoes: string | null;
 }
 
 export async function createFeedback(data: FeedbackData) {

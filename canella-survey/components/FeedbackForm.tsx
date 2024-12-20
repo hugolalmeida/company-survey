@@ -37,8 +37,8 @@ const FeedbackForm: React.FC = () => {
             qualidade_do_atendimento: ratings["Qualidade do Atendimento"] || null,
             nosso_relacionamento: ratings["Como Avalia Nosso Relacionamento"] || null,
             agregar_valor: ratings["Nossos Serviços Agregam Valor ao Seu Negócio"] || null,
-            palavra: feedback1.trim(),
-            observacoes: feedback2.trim(),
+            palavra: feedback1.trim() || null,
+            observacoes: feedback2.trim() || null,
         };
 
         try {
