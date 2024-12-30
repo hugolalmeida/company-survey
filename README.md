@@ -26,7 +26,7 @@ Certifique-se de ter os seguintes itens instalados:
 
 1. Clone o repositório:
 ```bash
-[git clone https://github.com/seu-usuario/seu-repositorio.git](https://github.com/hugolalmeida/company-survey.git)
+https://github.com/hugolalmeida/company-survey.git
 cd canella-survey
 ```
 2. Instale as dependencias:
