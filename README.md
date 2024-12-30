@@ -2,6 +2,8 @@
 
 Este é um projeto em **Next.js** para avaliar emojis de forma simples e intuitiva. Os usuários podem enviar suas avaliações via formulário, que é enviado usando o **EmailJS** e armazenado no banco de dados **NeonDB**. Um script adicional permite transferir os dados do NeonDB para um banco de dados local para análises ou backup.
 
+![Canella Survey](./canella-survey/public/avaliação.png)
+
 ## Funcionalidades
 
 - Avaliação de emojis com interface simples em Next.js.
